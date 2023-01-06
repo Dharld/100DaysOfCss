@@ -1,0 +1,359 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4b4841;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 180px;
+  border-radius: 3px;
+  perspective: 800px;
+}
+.frame .card .flip {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  perspective: 1000px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.frame .card .flip:hover {
+  transform: rotateX(180deg) translate3d(0, 0, 0);
+  box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.frame .card .front {
+  position: absolute;
+  transform: rotateX(0deg);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: #ffce4e;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+.frame .card .front .bike {
+  position: relative;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: 0.9s bike ease-in infinite;
+  transform-origin: 50% 100%;
+}
+.frame .card .front .street {
+  position: absolute;
+  top: 128px;
+  width: 210px;
+  height: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.frame .card .front .street .stripe-1 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 1px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-2 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 2px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-3 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 3px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-4 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 4px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-5 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 5px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-6 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 6px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-7 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 7px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-8 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 8px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-9 {
+  position: absolute;
+  right: -25px;
+  width: calc(4px + 9px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 1s street linear 0.75s infinite;
+}
+.frame .card .front .street .stripe-1 {
+  animation-duration: 0.9s;
+  animation-delay: 0.1s;
+}
+.frame .card .front .street .stripe-2 {
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+.frame .card .front .street .stripe-3 {
+  animation-duration: 0.85s;
+  animation-delay: 0.1s;
+}
+.frame .card .front .street .stripe-4 {
+  animation-duration: 0.8s;
+  animation-delay: 0.7s;
+}
+.frame .card .front .street .stripe-5 {
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+.frame .card .front .street .stripe-6 {
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+.frame .card .front .street .stripe-7 {
+  animation-delay: 0.3s;
+}
+.frame .card .front .street .stripe-8 {
+  animation-delay: 0.7s;
+}
+.frame .card .front .street .stripe-9 {
+  animation-duration: 1.25s;
+  animation-delay: 0.5s;
+}
+.frame .card .back {
+  position: absolute;
+  transform: rotateX(180deg);
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  backface-visibility: hidden;
+  background: #ffce4e;
+  overflow: hidden;
+}
+.frame .card .back .helicopter {
+  position: relative;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: 1.5s helicopter linear infinite;
+  transform-origin: 50% 100%;
+  z-index: 2;
+}
+.frame .card .back .sky {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 160px;
+  height: 100%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.frame .card .back .sky .cloud-1 {
+  position: absolute;
+  top: 73px;
+  right: -25px;
+  width: calc(14px + 2.1px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.28s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-2 {
+  position: absolute;
+  top: 75px;
+  right: -25px;
+  width: calc(14px + 2.65px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.04s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-3 {
+  position: absolute;
+  top: 42px;
+  right: -25px;
+  width: calc(14px + 3.95px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.5s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-4 {
+  position: absolute;
+  top: 151px;
+  right: -25px;
+  width: calc(14px + 1.65px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.93s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-5 {
+  position: absolute;
+  top: 121px;
+  right: -25px;
+  width: calc(14px + 3.65px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.87s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-6 {
+  position: absolute;
+  top: 129px;
+  right: -25px;
+  width: calc(14px + 4.6px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.76s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-7 {
+  position: absolute;
+  top: 140px;
+  right: -25px;
+  width: calc(14px + 2.4px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.8s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-8 {
+  position: absolute;
+  top: 49px;
+  right: -25px;
+  width: calc(14px + 1.25px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.31s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-9 {
+  position: absolute;
+  top: 44px;
+  right: -25px;
+  width: calc(14px + 2.35px);
+  height: 3px;
+  background-color: #4b4841;
+  border-radius: 1px;
+  animation: 0.7s street linear 0.88s infinite;
+  z-index: 1;
+}
+.frame .card .back .sky .cloud-3 {
+  animation-delay: 0.5s;
+}
+.frame .card .back .sky .cloud-9 {
+  animation-delay: 0.25s;
+}
+
+@keyframes bike {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.03);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+@keyframes helicopter {
+  0%, 100% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+@keyframes street {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  100% {
+    transform: translateX(-210px) scaleX(0.8);
+  }
+}
+@keyframes cloud {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  100% {
+    transform: translateX(-210px) scaleX(0.5);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

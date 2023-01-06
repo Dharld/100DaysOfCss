@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #46a6da;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.blobb {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: white;
+  top: 155px;
+  left: 155px;
+  animation: blobby 5s ease-in-out infinite;
+}
+
+.blobb-ring {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: 145px;
+  left: 145px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  animation: blobby-ring 5s ease-in-out infinite;
+}
+
+.octagon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  fill: #fff;
+  animation: octa 5s ease-in-out infinite;
+}
+
+.triangle {
+  position: absolute;
+  width: 106px;
+  height: 90px;
+  top: 145px;
+  left: 147px;
+  fill: #fff;
+  animation: triangle 5s ease-in-out infinite;
+}
+
+.octagon-sparkles {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  animation: octa-sparkles 5s ease-in-out infinite;
+
+  .sparkle {
+    position: absolute;
+    top: 0;
+    left: 98px;
+    width: 4px;
+    height: 200px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 25px;
+      left: 0;
+      border-radius: 2px;
+      background: white;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 25px;
+      bottom: 0;
+      left: 0;
+      border-radius: 2px;
+      background: white;
+    }
+
+    &.s2 {
+      transform: rotate(45deg);
+    }
+
+    &.s3 {
+      transform: rotate(90deg);
+    }
+
+    &.s4 {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.triangle-sparkles {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  animation: triangle-sparkles 5s ease-in-out infinite;
+
+  .sparkle {
+    position: absolute;
+    top: 0;
+    left: 98px;
+    width: 4px;
+    height: 200px;
+
+    &:after,
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 25px;
+      top: 0;
+      left: 0;
+      border-radius: 2px;
+      background: #fff;
+    }
+    &.s1 {
+      top: 10px;
+    }
+
+    &.s2 {
+      transform: rotate(124deg);
+    }
+    &.s3 {
+      transform: rotate(237deg);
+    }
+  }
+}
+
+@keyframes blobby {
+  // Bouncing
+  0% {
+    transform: translate3d(0, -300px, 0) scale(1.2);
+  }
+  10% {
+    transform: translate3d(0, 50px, 0) scaleY(0.8);
+  }
+
+  14% {
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+
+  18% {
+    transform: translate3d(0, 10px, 0) scaleY(0.9);
+  }
+  // Stop bouncing and begin growing
+  20%,
+  22% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+
+  26% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+  }
+  // End growing and disappears
+  32%,
+  74% {
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  // Reappears
+  80% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+  }
+
+  // Quickly shrink and let the ring outgrow
+  84% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  // Grow again and move up then down to disappear and let the next effect begins
+
+  86%,
+  88% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  92% {
+    transform: translate3d(0, -30px, 0) scale(0.9);
+  }
+
+  100% {
+    transform: translate3d(0, 300px, 0) scale(1.2);
+  }
+}
+
+@keyframes blobby-ring {
+  0%,
+  74% {
+    transform: translate3d(0, 0, 0) scale(0);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  84%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes octa {
+  0%,
+  30% {
+    transform: scale(0);
+  }
+  34% {
+    transform: scale(1.4);
+  }
+
+  38% {
+    transform: scale(0.9);
+  }
+
+  40%,
+  42% {
+    transform: scale(1);
+  }
+
+  46%,
+  48% {
+    transform: scale(1);
+  }
+
+  60%,
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes triangle {
+  0%,
+  58% {
+    transform: scale(0);
+  }
+
+  62% {
+    transform: scale(1.4);
+  }
+  66% {
+    transform: scale(0.9);
+  }
+
+  68%,
+  70% {
+    transform: scale(1);
+  }
+  80%,
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes octa-sparkles {
+  0%,
+  54% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  55%,
+  57% {
+    opacity: 1;
+  }
+
+  58%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes triangle-sparkles {
+  0%,
+  70% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70%,
+  79% {
+    opacity: 1;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}

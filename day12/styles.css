@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4cb6de;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.frame {
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame .quotation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(180deg);
+  margin: auto;
+  color: #6ac2e3;
+  z-index: 1;
+  top: 40px;
+  left: 10px;
+}
+.frame > div {
+  width: 350px;
+  z-index: 2;
+}
+.frame > div .quote {
+  font-size: 24px;
+  margin: auto auto;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.frame > div .quote span {
+  background-color: #286f8a;
+  padding: 0.35rem;
+  cursor: pointer;
+}
+.frame > div .definition {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 270px;
+  opacity: 0;
+}
+.frame > div .definition.active {
+  animation: 300ms slideIn linear forwards;
+}
+.frame > div .definition.not-active {
+  animation: 300ms slideOut linear forwards;
+}
+.frame > div .definition .top {
+  background: white;
+  color: #286f8a;
+  padding: 0.25rem 0.95rem;
+}
+.frame > div .definition .meaning {
+  background-color: #286f8a;
+  padding: 0.5rem 0.95rem;
+  color: white;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.frame > div .definition .meaning span {
+  font-weight: 600;
+}
+.frame > div .definition::after {
+  position: absolute;
+  bottom: -4px;
+  content: "";
+  background-color: #286f8a;
+  width: 8px;
+  height: 8px;
+  transform: translateX(137.5px) rotate(45deg);
+}
+.frame > div .author {
+  font-size: 20px;
+  font-weight: 100;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 10px;
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    top: 10px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ffce4e;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  background: #353535;
+  border-radius: 3px;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.polygon {
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  top: 60px;
+  left: 50px;
+}
+
+.polygon .middle {
+  fill: #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+.polygon .light {
+  fill: #eee;
+  transition: all 0.5s ease-in-out;
+}
+
+.polygon .dark {
+  fill: #aaa;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=styles.css.map */

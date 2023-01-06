@@ -1,0 +1,377 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700;600;500;400;300,400,300);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4c4c4c;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  position: relative;
+  width: 212px;
+  height: 212px;
+  border-radius: 50%;
+  background: #242424;
+  border: 8px solid #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle .dots {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.circle .dots .dot {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: white;
+  top: 12px;
+  left: calc(50% - 1px);
+}
+.circle .dots .dot[id="1"] {
+  transform: rotate(5.8064516129deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="2"] {
+  transform: rotate(11.6129032258deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="3"] {
+  transform: rotate(17.4193548387deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="4"] {
+  transform: rotate(23.2258064516deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="5"] {
+  transform: rotate(29.0322580645deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="6"] {
+  transform: rotate(34.8387096774deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="7"] {
+  transform: rotate(40.6451612903deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="8"] {
+  transform: rotate(46.4516129032deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="9"] {
+  transform: rotate(52.2580645161deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="10"] {
+  transform: rotate(58.064516129deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="11"] {
+  transform: rotate(63.8709677419deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="12"] {
+  transform: rotate(69.6774193548deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="13"] {
+  transform: rotate(75.4838709677deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="14"] {
+  transform: rotate(81.2903225806deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="15"] {
+  transform: rotate(87.0967741935deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="16"] {
+  transform: rotate(92.9032258065deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="17"] {
+  transform: rotate(98.7096774194deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="18"] {
+  transform: rotate(104.5161290323deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="19"] {
+  transform: rotate(110.3225806452deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="20"] {
+  transform: rotate(116.1290322581deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="21"] {
+  transform: rotate(121.935483871deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="22"] {
+  transform: rotate(127.7419354839deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="23"] {
+  transform: rotate(133.5483870968deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="24"] {
+  transform: rotate(139.3548387097deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="25"] {
+  transform: rotate(145.1612903226deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="26"] {
+  transform: rotate(150.9677419355deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="27"] {
+  transform: rotate(156.7741935484deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="28"] {
+  transform: rotate(162.5806451613deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="29"] {
+  transform: rotate(168.3870967742deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="30"] {
+  transform: rotate(174.1935483871deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="31"] {
+  transform: rotate(180deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="32"] {
+  transform: rotate(185.8064516129deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="33"] {
+  transform: rotate(191.6129032258deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="34"] {
+  transform: rotate(197.4193548387deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="35"] {
+  transform: rotate(203.2258064516deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="36"] {
+  transform: rotate(209.0322580645deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="37"] {
+  transform: rotate(214.8387096774deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="38"] {
+  transform: rotate(220.6451612903deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="39"] {
+  transform: rotate(226.4516129032deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="40"] {
+  transform: rotate(232.2580645161deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="41"] {
+  transform: rotate(238.064516129deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="42"] {
+  transform: rotate(243.8709677419deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="43"] {
+  transform: rotate(249.6774193548deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="44"] {
+  transform: rotate(255.4838709677deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="45"] {
+  transform: rotate(261.2903225806deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="46"] {
+  transform: rotate(267.0967741935deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="47"] {
+  transform: rotate(272.9032258065deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="48"] {
+  transform: rotate(278.7096774194deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="49"] {
+  transform: rotate(284.5161290323deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="50"] {
+  transform: rotate(290.3225806452deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="51"] {
+  transform: rotate(296.1290322581deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="52"] {
+  transform: rotate(301.935483871deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="53"] {
+  transform: rotate(307.7419354839deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="54"] {
+  transform: rotate(313.5483870968deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="55"] {
+  transform: rotate(319.3548387097deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="56"] {
+  transform: rotate(325.1612903226deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="57"] {
+  transform: rotate(330.9677419355deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="58"] {
+  transform: rotate(336.7741935484deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="59"] {
+  transform: rotate(342.5806451613deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="60"] {
+  transform: rotate(348.3870967742deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="61"] {
+  transform: rotate(354.1935483871deg);
+  transform-origin: 0 87px;
+}
+.circle .dots .dot[id="62"] {
+  transform: rotate(360deg);
+  transform-origin: 0 87px;
+}
+.circle .infos {
+  font-size: 12px;
+}
+.circle .infos .time {
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 700;
+}
+.circle .infos .cal div {
+  float: left;
+}
+.circle .infos .cal div .heart {
+  color: #b94a4a;
+  margin-right: 2px;
+  animation: 1.16s beat ease-in infinite;
+}
+.circle .infos .cal .energy {
+  float: right;
+}
+.circle .spinner {
+  position: absolute;
+  width: 202px;
+  height: 202px;
+  border-radius: 50%;
+}
+.circle .spinner circle {
+  fill: none;
+  stroke: #b94a4a;
+  stroke-width: 3px;
+  stroke-dasharray: 625;
+  transform-origin: center center;
+  transform: rotate(90deg);
+  animation: spinner 5s linear infinite;
+}
+
+@keyframes beat {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes spinner {
+  0% {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  100% {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

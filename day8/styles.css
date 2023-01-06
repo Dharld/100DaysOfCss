@@ -1,0 +1,370 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: contrast(25);
+}
+
+.ball {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  filter: blur(15px);
+}
+
+.blub-1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(25deg);
+}
+.blub-1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 38.5px 38.5px;
+  animation: rotate 3.8s ease-in-out 0.5s infinite;
+}
+
+.sparkle-1 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(23deg);
+}
+.sparkle-1::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 57px 50px;
+  animation: rotate 3.875s ease-in-out 0.75s infinite;
+}
+
+.blub-2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(50deg);
+}
+.blub-2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 38px 38px;
+  animation: rotate 3.6s ease-in-out 1s infinite;
+}
+
+.sparkle-2 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(46deg);
+}
+.sparkle-2::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 64px 35px;
+  animation: rotate 3.75s ease-in-out 1.5s infinite;
+}
+
+.blub-3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(75deg);
+}
+.blub-3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 37.5px 37.5px;
+  animation: rotate 3.4s ease-in-out 1.5s infinite;
+}
+
+.sparkle-3 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(69deg);
+}
+.sparkle-3::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 71px 20px;
+  animation: rotate 3.625s ease-in-out 2.25s infinite;
+}
+
+.blub-4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(100deg);
+}
+.blub-4::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 37px 37px;
+  animation: rotate 3.2s ease-in-out 2s infinite;
+}
+
+.sparkle-4 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(92deg);
+}
+.sparkle-4::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 78px 5px;
+  animation: rotate 3.5s ease-in-out 3s infinite;
+}
+
+.blub-5 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(125deg);
+}
+.blub-5::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 36.5px 36.5px;
+  animation: rotate 3s ease-in-out 2.5s infinite;
+}
+
+.sparkle-5 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(115deg);
+}
+.sparkle-5::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 85px -10px;
+  animation: rotate 3.375s ease-in-out 3.75s infinite;
+}
+
+.blub-6 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(150deg);
+}
+.blub-6::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 36px 36px;
+  animation: rotate 2.8s ease-in-out 3s infinite;
+}
+
+.sparkle-6 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(138deg);
+}
+.sparkle-6::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 92px -25px;
+  animation: rotate 3.25s ease-in-out 4.5s infinite;
+}
+
+.blub-7 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(175deg);
+}
+.blub-7::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 35.5px 35.5px;
+  animation: rotate 2.6s ease-in-out 3.5s infinite;
+}
+
+.sparkle-7 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(161deg);
+}
+.sparkle-7::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 99px -40px;
+  animation: rotate 3.125s ease-in-out 5.25s infinite;
+}
+
+.blub-8 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(200deg);
+}
+.blub-8::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(5px);
+  transform-origin: 35px 35px;
+  animation: rotate 2.4s ease-in-out 4s infinite;
+}
+
+.sparkle-8 {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(184deg);
+}
+.sparkle-8::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  filter: blur(1px);
+  transform-origin: 106px -55px;
+  animation: rotate 3s ease-in-out 6s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

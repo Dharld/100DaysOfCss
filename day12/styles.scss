@@ -1,0 +1,137 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4cb6de;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.frame {
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quotation {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: rotate(180deg);
+    margin: auto;
+    color: #6ac2e3;
+    z-index: 1;
+    top: 40px;
+    left: 10px;
+  }
+
+  & > div {
+    width: 350px;
+    z-index: 2;
+
+    .quote {
+      font-size: 24px;
+      margin: auto auto;
+      line-height: 1.5;
+      font-weight: 500;
+
+      span {
+        background-color: #286f8a;
+        padding: 0.35rem;
+        cursor: pointer;
+      }
+    }
+
+    .definition {
+      position: absolute;
+      top: 0;
+      left: 40px;
+      width: 270px;
+      opacity: 0;
+
+      &.active {
+        animation: 300ms slideIn linear forwards;
+      }
+
+      &.not-active {
+        animation: 300ms slideOut linear forwards;
+      }
+
+      .top {
+        background: white;
+        color: #286f8a;
+        padding: 0.25rem 0.95rem;
+      }
+
+      .meaning {
+        background-color: #286f8a;
+        padding: 0.5rem 0.95rem;
+        color: white;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        font-weight: 500;
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      $arrow-width: 8px;
+
+      &::after {
+        position: absolute;
+        bottom: calc(-1 * $arrow-width / 2);
+        content: "";
+        background-color: #286f8a;
+        width: $arrow-width;
+        height: $arrow-width;
+        transform: translateX(137.5px) rotate(45deg);
+      }
+    }
+
+    .author {
+      font-size: 20px;
+      font-weight: 100;
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 10px;
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    top: 10px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}

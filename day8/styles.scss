@@ -1,0 +1,109 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$number-of-blobs: 8;
+
+@mixin center-absolutely-positionned {
+  top: 50%;
+  left: 50%;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: contrast(25);
+}
+
+.ball {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  filter: blur(15px);
+}
+
+@for $i from 1 through $number-of-blobs {
+  .blub-#{$i} {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    @include center-absolutely-positionned;
+    transform: translate3d(-50%, -50%, 0) rotate(calc(25deg * $i));
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      filter: blur(5px);
+      transform-origin: calc(39px - 0.5px * $i) calc(39px - 0.5px * $i);
+      animation: rotate
+        calc(4s - 0.2s * $i)
+        ease-in-out
+        calc(0.5s * $i)
+        infinite;
+    }
+  }
+  .sparkle-#{$i} {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    @include center-absolutely-positionned;
+    transform: translate3d(-50%, -50%, 0) rotate(calc(23deg * $i));
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(7px + 1px * $i);
+      height: calc(7px + 1px * $i);
+      border-radius: 50%;
+      background: white;
+      filter: blur(1px);
+      transform-origin: calc(50px + 7px * $i) calc(65px - 15px * $i);
+      animation: rotate
+        calc(4s - 0.125s * $i)
+        ease-in-out
+        calc(0.75s * $i)
+        infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

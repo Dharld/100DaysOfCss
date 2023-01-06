@@ -1,0 +1,121 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ecd9c2;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+
+  .invisible-man {
+    animation: 2s show 0s linear both;
+  }
+  .leg {
+    position: absolute;
+    width: 151px;
+    height: 245px;
+    left: 140px;
+    animation-fill-mode: both;
+
+    /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+
+    &.left {
+      animation: 2s leg-swing 0s infinite normal none;
+      transform-origin: 50% 0;
+
+      .shoe {
+        animation: shoe-turn 2s ease-in-out 0ms infinite;
+      }
+    }
+    &.right {
+      animation: 2s leg-swing 1s infinite normal none;
+      transform-origin: 50% 0;
+
+      .shoe {
+        .shoe {
+          animation: shoe-turn 2s ease-in-out 1ms infinite;
+        }
+      }
+    }
+
+    .shoe {
+      position: absolute;
+      width: 151px;
+      height: 130px;
+      left: 0;
+      bottom: 0;
+      background: url("https://100dayscss.com/codepen/doc-martens.svg") center
+        center no-repeat;
+    }
+  }
+
+  .floor {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 156px;
+    background: #232323;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes leg-swing {
+  from {
+    transform: rotate(-22deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  to {
+    transform: rotate(-22deg);
+  }
+}
+
+@keyframes shoe-turn {
+  0%,
+  100% {
+    transform: rotate(-10deg) translateY(-5px) translateX(10px);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-10px) translateX(10px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-30px) translateX(0);
+  }
+}

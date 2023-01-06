@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Courier New", Courier, monospace;
+  background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.numbers {
+  position: relative;
+  height: 100px;
+  width: 200px;
+  margin: 0;
+}
+
+.one-one {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 3px;
+  z-index: -1;
+  transform: rotate(135deg);
+  top: 11px;
+  left: -25px;
+}
+
+.one-two {
+  position: absolute;
+  height: 100px;
+  width: 24px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 13px 0 rgb(0 0 0 / 20%), 11px 0px 14px 3px rgb(0 0 0 / 10%);
+  z-index: 10;
+}
+
+.zero {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 24px solid white;
+  margin: 0;
+  box-shadow: 0 0 13px 0 rgb(0 0 0 / 20%);
+}
+.zero-one {
+  left: 15px;
+  z-index: 5;
+}
+.zero-two {
+  right: 0px;
+}
+
+span {
+  display: block;
+  color: white;
+}
+
+.big {
+  font-size: 82px;
+  margin-top: 6px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.small {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  line-height: 18px;
+}

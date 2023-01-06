@@ -1,0 +1,351 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #1a2238;
+  color: #394568;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.moon {
+  position: absolute;
+  width: 67px;
+  height: 67px;
+  top: 45px;
+  left: 55px;
+  border-radius: 50%;
+  background: #f6edbd;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 #f6edbd;
+  animation: 0.75s raise ease-out;
+  animation-fill-mode: both;
+
+  @for $i from 1 through 11 {
+    .crater-#{$i} {
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: 9px;
+      left: 28px;
+      border-radius: 10px;
+      background: #ece1a8;
+    }
+  }
+
+  .crater-4,
+  .crater-9,
+  .crater-8,
+  .crater-7,
+  .crater-6,
+  .crater-5 {
+    width: 6px;
+    height: 6px;
+    top: 37px;
+    left: 49px;
+  }
+
+  .crater-1 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 9px;
+    left: 28px;
+    border-radius: 10px;
+    background: #ece1a8;
+  }
+
+  .crater-2 {
+    top: 12px;
+    left: 0;
+  }
+
+  .crater-3 {
+    top: 56px;
+    left: 10px;
+  }
+
+  .crater-5 {
+    top: 24px;
+    left: 61px;
+  }
+
+  .crater-6 {
+    top: 55px;
+    left: 33px;
+  }
+
+  .crater-7 {
+    top: 17px;
+    left: 46px;
+  }
+
+  .crater-8 {
+    top: 28px;
+    left: 27px;
+  }
+
+  .crater-9 {
+    top: 39px;
+    left: 17px;
+  }
+
+  .crater-10 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 9px;
+    left: 28px;
+    border-radius: 10px;
+    background: #ece1a8;
+  }
+
+  .crater-11 {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 37px;
+    left: 37px;
+    border-radius: 10px;
+    background: #ece1a8;
+  }
+}
+
+.hill-bg-1,
+.hill-bg-2,
+.hill-fg-1,
+.hill-fg-2,
+.hill-fg-3 {
+  position: absolute;
+  z-index: 2;
+  width: 337px;
+  height: 271px;
+  top: 201px;
+  left: -57px;
+  background: #26314f;
+  border-radius: 50%;
+}
+
+.hill-bg-2 {
+  top: 201px;
+  left: 204px;
+}
+
+.hill-fg-1,
+.hill-fg-3,
+.hill-fg-2 {
+  background: #303c5d;
+  top: 248px;
+  left: -137px;
+}
+
+.hill-fg-2 {
+  top: 208px;
+  left: 43px;
+}
+
+.hill-fg-3 {
+  top: 238px;
+  left: 263px;
+}
+
+.front {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 90px;
+
+  .temperature {
+    float: left;
+    margin-left: 20px;
+    font-size: 45px;
+    line-height: 90px;
+  }
+
+  .info {
+    float: left;
+    margin: 25px 0 0 13px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .preview {
+    float: right;
+    text-align: right;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 25px 20px 0 0;
+
+    td {
+      padding: 0 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &:first-child {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .drop-big-#{$i},
+  .drop-medium-#{$i},
+  .drop-small-#{$i} {
+    position: absolute;
+    z-index: 20;
+    bottom: 90px;
+    left: -20px + 38px * $i;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #7fc1f9;
+    animation: drop 0.9s linear 0.2s * $i infinite;
+    animation-fill-mode: both;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -2px;
+      left: 1px;
+      width: 6px;
+      height: 6px;
+      background: #7fc1f9;
+      border-radius: 3px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -5px;
+      left: 2px;
+      width: 4px;
+      height: 10px;
+      background: #7fc1f9;
+      border-radius: 50%;
+    }
+  }
+  .drop-small-#{$i} {
+    opacity: 0.2;
+    width: 3px;
+    height: 3px;
+    animation: drop 2.1s linear 0.5s * $i infinite;
+    animation-fill-mode: both;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -2px;
+      left: 1px;
+      width: 2px;
+      height: 2px;
+      background: #7fc1f9;
+      border-radius: 3px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -3px;
+      left: 1px;
+      width: 2px;
+      height: 4px;
+      background: #7fc1f9;
+      border-radius: 50%;
+    }
+  }
+  .drop-medium-#{$i} {
+    opacity: 0.6;
+    width: 5px;
+    height: 5px;
+    animation: drop 1.75s linear 0.35s * $i infinite;
+    animation-fill-mode: both;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -2px;
+      left: 1px;
+      width: 4px;
+      height: 4px;
+      background: #7fc1f9;
+      border-radius: 3px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -4px;
+      left: 2px;
+      width: 2px;
+      height: 6px;
+      background: #7fc1f9;
+      border-radius: 50%;
+    }
+  }
+}
+
+.drop-big-1,
+.drop-big-4,
+.drop-big-9 {
+  animation-delay: 0.164s;
+}
+.drop-big-2,
+.drop-big-6,
+.drop-big-7 {
+  animation-delay: 0.46s;
+}
+.drop-big-3,
+.drop-big-5 {
+  animation-delay: 0.2s;
+}
+.drop-big-9,
+.drop-big-10 {
+  animation-delay: 1.24s;
+}
+
+@keyframes raise {
+  0% {
+    transform: translate3d(-25px, 150px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+
+  85% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}

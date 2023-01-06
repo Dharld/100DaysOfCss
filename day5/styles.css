@@ -1,0 +1,279 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #42a7a1;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 280px;
+  height: 220px;
+  box-shadow: 10px 10px 15px 0 rgb(0 0 0 / 30%);
+  border-radius: 3px;
+  background: white;
+  overflow: hidden;
+}
+
+.header {
+  height: 60px;
+  background: #f1ba64;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+
+.header .right {
+  text-align: right;
+}
+
+.header .big {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.header span {
+  display: block;
+}
+.header .small {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.parameters {
+  text-align: right;
+  padding: 10px 0.375rem 14px 0.375rem;
+}
+
+.parameters span {
+  position: relative;
+  font-size: 9px;
+  color: #606060;
+  line-height: 13px;
+  padding: 0 10px 0 25px;
+}
+
+.parameters span::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+  left: 6px;
+  top: 6px;
+}
+
+.parameters span.red::before {
+  background-color: #fa7373;
+}
+
+.parameters span.blue::before {
+  background-color: #7ba2ff;
+}
+
+.statistics {
+  margin: 0 auto;
+  width: 260px;
+  position: relative;
+  height: 81px;
+}
+
+.statistics .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #f2f2f2;
+}
+
+.statistics .line.line-2 {
+  top: 40px;
+}
+
+.statistics .line.line-3 {
+  top: unset;
+  bottom: 0px;
+}
+
+.statistics .data svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.statistics .data svg polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.data .tooltip {
+  display: block;
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  font-weight: 600;
+  transform: translate3d(-50%, 10px, 0);
+  font-size: 11px;
+  line-height: 11px;
+  color: white;
+  padding: 8px 6px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  /* property name | duration | easing function | delay */
+  transition: transform 400ms ease-out 0ms, opacity 0s ease-out;
+}
+
+.data.red .tooltip,
+.data.red .tooltip:after {
+  background: #fa7373;
+}
+.data .tooltip:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 6px;
+  width: 6px;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+  transform: rotate(45deg);
+}
+.data.blue .tooltip,
+.data.blue .tooltip:after {
+  background: #7ba2ff;
+}
+.data.red svg polyline {
+  stroke: #fa7373;
+}
+
+.data.blue svg polyline {
+  stroke: #7ba2ff;
+}
+
+.data.red [class^="point-"] {
+  position: absolute;
+  background: #fa7373;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.data.blue [class^="point-"] {
+  position: absolute;
+  background: #7ba2ff;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.data .points div[class^="point-"]:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.data.red .points .point-1 {
+  left: 7px;
+  top: 43px;
+}
+.data.red .points .point-2 {
+  left: 48px;
+  top: 9px;
+}
+.data.red .points .point-3 {
+  left: 88px;
+  top: 20px;
+}
+.data.red .points .point-4 {
+  left: 128px;
+  top: 8px;
+}
+.data.red .points .point-5 {
+  left: 169px;
+  top: 36px;
+}
+.data.red .points .point-6 {
+  left: 209px;
+  top: 45px;
+}
+.data.red .points .point-7 {
+  left: 249px;
+  top: 16px;
+}
+
+.data.blue .points .point-1 {
+  left: 7px;
+  top: 59px;
+}
+.data.blue .points .point-2 {
+  left: 48px;
+  top: 47px;
+}
+.data.blue .points .point-3 {
+  left: 88px;
+  top: 62px;
+}
+.data.blue .points .point-4 {
+  left: 128px;
+  top: 52px;
+}
+.data.blue .points .point-5 {
+  left: 169px;
+  top: 59px;
+}
+.data.blue .points .point-6 {
+  left: 209px;
+  top: 72px;
+}
+.data.blue .points .point-7 {
+  left: 249px;
+  top: 62px;
+}
+
+.days {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100%);
+}
+
+.day {
+  flex: 1;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 9px;
+  color: #949494;
+  line-height: 40px;
+}
