@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  top: 175px;
+  left: 115.5px;
+  z-index: 10;
+  cursor: pointer;
+}
+.circle.c2 {
+  left: 175px;
+}
+.circle.c3 {
+  left: 234.5px;
+}
+
+.active {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  top: 180px;
+  left: 120px;
+  transition: 400ms transform ease-in;
+  z-index: 11;
+}
+
+#check-1:checked ~ .active {
+  transform: translateX(0);
+}
+#check-1:checked ~ .bg {
+  transform: translateX(0);
+}
+
+#check-2:checked ~ .active {
+  transform: translateX(59.5px);
+}
+#check-2:checked ~ .bg {
+  transform: translateX(-400px);
+}
+
+#check-3:checked ~ .active {
+  transform: translateX(119.5px);
+}
+#check-3:checked ~ .bg {
+  transform: translateX(-800px);
+}
+
+.bg {
+  box-sizing: content-box;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #3498db;
+  border-left: 400px #9b59b6 solid;
+  border-right: 400px #1abc9c solid;
+  transition: 250ms transform ease-in;
+}
+
+/*# sourceMappingURL=styles.css.map */
