@@ -1,0 +1,232 @@
+$bg-dark: #2c3e50;
+$bg-light: #354a5f;
+$green: #1abc9c;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: $bg-dark;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.circle {
+  $size: 200px;
+  position: absolute;
+  left: calc(50% - $size / 2);
+  top: calc(38% - $size / 2);
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $bg-light;
+  animation: none;
+
+  &.circle-outer {
+    background: transparent;
+    border: 5px solid $bg-light;
+  }
+}
+
+.button {
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  bottom: 75px;
+  width: 200px;
+  height: 40px;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 75px;
+  color: $bg-dark;
+  transform: translateX(-50%) scale(1);
+  cursor: pointer;
+  transition: all 150ms ease-in;
+  font-weight: 400;
+  animation: none;
+
+  &.reset {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: $green;
+    color: white;
+  }
+}
+
+#cb:checked ~ .button {
+  animation: 1.5s button ease-in-out 1.7s;
+  animation-fill-mode: both;
+}
+
+#cb:checked ~ .button.reset {
+  animation: 1.5s reset ease-in-out 3.7s;
+  animation-fill-mode: both;
+}
+
+#cb:checked ~ .circle {
+  animation: 1.25s circle ease-in-out;
+  animation-fill-mode: both;
+}
+
+#cb:checked ~ .circle-outer {
+  animation: 1.25s circle-outer ease-in-out;
+  animation-fill-mode: both;
+}
+
+.icon.mail {
+  position: absolute;
+  width: 120px;
+  height: 70px;
+  left: calc(50% - 60px);
+  top: calc(38% - 35px);
+  stroke-dasharray: 375;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffest 150ms linear;
+}
+
+#cb:checked ~ .icon.mail {
+  animation: 1s stroke-dash ease-in-out;
+  animation-fill-mode: both;
+}
+#cb:checked ~ .icon.plane {
+  stroke-dashoffset: 0;
+
+  animation: 1.7s fly ease-in-out;
+  animation-fill-mode: both;
+}
+
+.icon.plane {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: calc(50% - 60px);
+  top: calc(38% - 35px);
+  stroke-dasharray: 325 325;
+  stroke-dashoffset: 325;
+}
+
+.icon {
+  fill: none;
+  stroke-width: 2px;
+  stroke: #ecf0f1;
+  stroke-linecap: square;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes button {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  30% {
+    background-color: $green;
+    color: transparent;
+    width: 200px;
+  }
+
+  50%,
+  60% {
+    width: 40px;
+    transform: translateX(-50%) scale(1);
+  }
+
+  70% {
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    width: 40px;
+    color: transparent;
+    background-color: $green;
+    transform: translateX(-50%) scale(0);
+  }
+}
+
+@keyframes reset {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(1);
+  }
+
+  10%,
+  15% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes circle-outer {
+  0%,
+  10% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1.0125);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes stroke-dash {
+  to {
+    stroke-dashoffset: 375;
+  }
+}
+
+@keyframes fly {
+  0%,
+  45% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translate3d(-5px, 5px, 0) scale(1.05);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100px, -50px, 100px) scale(0.75);
+    opacity: 0;
+  }
+}
