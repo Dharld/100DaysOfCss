@@ -58,10 +58,10 @@
 
 @keyframes dots {
   from {
-    stroke-dashoffset: 14px;
+    stroke-dashoffset: 0;
   }
   to {
-    stroke-dashoffset: 64px;
+    stroke-dashoffset: 50px;
   }
 }
 @keyframes mouth {
