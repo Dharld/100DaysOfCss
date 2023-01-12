@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 2 - Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="frame"></div>
+    <div class="frame">
+      <div class="headline">
+        <span>Your daily</span>
+        progress
+      </div>
+      <div class="circles">
+        <div class="circle">
+          <svg>
+            <circle cx="100" cy="100" r="60"></circle>
+            <circle cx="100" cy="100" r="60" id="gauge"></circle>
+          </svg>
+          <div class="text">2758 <span>kcal</span></div>
+        </div>
+        <div class="circle small small-1">
+          <svg>
+            <circle cx="75" cy="75" r="40"></circle>
+            <circle cx="75" cy="75" r="40" id="gauge-1"></circle>
+          </svg>
+          <div class="text">8563 <span>steps</span></div>
+        </div>
+        <div class="circle small small-2">
+          <svg>
+            <circle cx="75" cy="75" r="40"></circle>
+
+            <circle cx="75" cy="75" r="40" id="gauge-2"></circle>
+          </svg>
+          <div class="text">6,2 <span>km</span></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
